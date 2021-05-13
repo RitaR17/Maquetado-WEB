@@ -1,0 +1,199 @@
+html{
+	height: 100%;
+}
+body{
+	background-color: #999999;
+	min-height: 100%;
+
+}
+
+.grid-container{
+		display:grid;
+		grid-template-rows: 6rem 13rem 18rem 10rem ;
+		grid-template-columns: 70% 30%;
+			grid-template-areas: 
+			"nav-area      nav-area"
+			"header-area   header-area"
+			"section-area  aside-area"
+			"footer-area   footer-area"
+;
+}
+
+/**.grid2{
+grid-template: 
+			"nav-area      nav-area"      6rem
+			"header-area   header-area"   13rem
+			"section-area  section-area"  18rem
+			"footer-area   footer-area"   10rem/
+			70%            30%
+;
+
+}
+**/
+
+.grid-gallery{
+	display:grid;
+	grid-template-columns: repeat(4,auto);
+	grid-template-rows: auto auto;
+
+}
+      
+
+nav {
+	background-color: #00B33C;
+	grid-area: nav-area;
+}
+
+header{
+	background-color: crimson;
+	grid-area: header-area;
+}
+
+img {
+	background-color: #6350ca;
+}
+
+section{
+	background-color: royalblue;
+	grid-area: section-area;
+}
+
+aside{
+	background-color: #1ac6ff;
+	grid-area: aside-area;
+}
+
+footer{
+	background-color: palevioletred;
+	grid-area: footer-area;
+}
+
+.img1 {
+
+}
+
+.img2{
+	grid-column-start: 2;
+	grid-column-end: 4;
+}
+.img3{
+	grid-row-start: 1;
+	grid-row-end: 3;
+	grid-column-start: 4;
+	grid-column-end: 5;
+}
+
+.img4{
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+/*****************************
+CAMBIOS PARA PHONE
+******************************/
+@media (max-width: 425px){
+	nav{
+		opacity: 20%;
+
+				grid-template-rows: 2rem 4rem 8rem 9rem ;
+		grid-template-columns: 20% 10%;
+	}
+
+		.gridcontainer{
+		grid-template:
+		"nav-area     " 6rem
+		"header-area  " 13rem
+		"section-area " auto
+		"aside-area   " 4rem
+		"footer-area  "10rem /
+		;
+	}
+
+.grid-container{
+	display: grid;
+	grid-template-rows: 5% 22% 65% 8%;
+	grid-template-columns: 75% 25%;
+	grid-template-areas:
+ 
+		"section-area	nav-area"
+		"section-area	aside-area"
+		"header-area 	aside-area"
+		"footer-area 	footer-area"
+;
+}
+
+.grid-galley{
+	display: grid;
+	grid-template-columns: repeat(2,auto);
+	grid-template-rows: 435px 325px 375px;
+}
+
+.grid-gallery{
+	grid-template-columns: auto;
+	grid-template-rows: repeat(5,3rem);
+}
+
+.img2
+{
+	grid-column-start: 1;
+	grid-column-end: 2; 
+}
+.img3{
+	grid-row-start: 3;
+	grid-row-end:4;
+}
+
+.img4{
+	grid-column-start: 5;
+	grid-column-end: 6;
+}
+
+
+
+/*****************************
+CAMBIOS PARA TABLETA
+******************************/
+
+/*PROFE EDSON: Disculpe porque mi código no está bien hecho, 
+creo que mis calculos para el responsive no fueron buenos,
+tuve muchos problemas con el grid y 
+prefiero entregar una pagina que se vea "estéticamente bien", 
+que una que al momento del responsive no funcione para nada" */
+
+@media (max-width: 768px)
+(max-height: 1024px){
+	nav{
+		opacity: 20%;
+	}
+
+
+		.gridcontainer{
+		grid-template:
+		"nav-area     " 6rem
+		"header-area  " 10rem
+		"section-area " auto
+		"aside-area   " 4rem
+		"footer-area  "10rem /
+		;
+	}
+
+
+.grid-gallery{
+	grid-template-columns: auto;
+	grid-template-rows: repeat(7.8rem);
+}
+
+.img2
+{
+	grid-column-start: 1;
+	grid-column-end: 2; 
+}
+.img3{
+	grid-row-start: 3;
+	grid-row-end:4;
+}
+
+.img4{
+	grid-column-start: 5;
+	grid-column-end: 6;
+}
